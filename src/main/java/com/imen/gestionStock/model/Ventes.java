@@ -15,4 +15,7 @@ import lombok.NoArgsConstructor;
 @EqualsAndHashCode(callSuper = true)
 
 public class Ventes extends AbstractEntity{
+
+    //FIXME;
+    private String code;
 }

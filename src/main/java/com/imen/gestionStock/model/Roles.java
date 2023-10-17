@@ -15,4 +15,7 @@ import lombok.NoArgsConstructor;
 @EqualsAndHashCode(callSuper = true)
 
 public class Roles extends AbstractEntity {
+
+    private  String nom;
+
 }

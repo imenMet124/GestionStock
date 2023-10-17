@@ -15,4 +15,6 @@ import lombok.NoArgsConstructor;
 @EqualsAndHashCode(callSuper = true)
 
 public class utilisateur extends AbstractEntity  {
+
+    private String nom;
 }
