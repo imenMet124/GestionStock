@@ -1,21 +1,23 @@
 package com.imen.gestionStock.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import jakarta.persistence.*;
+import lombok.*;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 @Entity
 @Table(name = "roles" )
 @EqualsAndHashCode(callSuper = true)
 
 public class Roles extends AbstractEntity {
 
-    private  String nom;
+    @Column(name = "rolename")
+    private  String roleName;
+
+    @ManyToOne
+    @JoinColumn (name = "idutilisateur ")
+    private  utilisateur utilisateur;
 
 }

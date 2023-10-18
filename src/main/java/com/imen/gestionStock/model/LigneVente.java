@@ -1,13 +1,7 @@
 package com.imen.gestionStock.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import jakarta.persistence.*;
+import lombok.*;
 
 import java.math.BigDecimal;
 
@@ -15,6 +9,7 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+@Builder
 @Table(name = "lignevente" )
 @EqualsAndHashCode(callSuper = true)
 
@@ -24,5 +19,11 @@ public class LigneVente extends AbstractEntity {
     @JoinColumn(name="idvente")
     private Ventes ventes;
 
+    @Column(name = "quantite")
     private BigDecimal quantite;
+
+    @Column(name = "prixUnitaire")
+    private BigDecimal prixUnitaire;
+
+
 }
