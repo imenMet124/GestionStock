@@ -10,6 +10,7 @@ import java.util.List;
 @Data
 @Builder
 public class ClientDto {
+    private Integer id;
 
     private String nom;
 

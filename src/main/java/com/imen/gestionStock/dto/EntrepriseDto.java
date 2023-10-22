@@ -9,9 +9,9 @@ import java.util.List;
 @Data
 public class EntrepriseDto {
 
+    private Integer id;
+
     private String description;
-
-
     private AdresseDto adresse;
 
     private String photo;

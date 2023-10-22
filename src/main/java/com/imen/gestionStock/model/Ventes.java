@@ -5,6 +5,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import lombok.*;
 
+import java.time.Instant;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -19,7 +21,7 @@ public class Ventes extends AbstractEntity{
     private String code;
 
     @Column(name = "datevente")
-    private String dateVente;
+    private Instant dateVente;
 
     @Column(name = "commentaire")
     private String commentaire;

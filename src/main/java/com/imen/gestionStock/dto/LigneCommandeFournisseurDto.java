@@ -10,6 +10,8 @@ import java.util.List;
 @Builder
 public class LigneCommandeFournisseurDto {
 
+    private Integer id;
+
     private ArticleDto article;
     private List<CommandeFournisseurDto> commandeFournisseurs;
     private BigDecimal prixUnitaire;
